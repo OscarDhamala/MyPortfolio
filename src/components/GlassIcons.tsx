@@ -38,7 +38,7 @@ const GlassIcons: React.FC<GlassIconsProps> = ({ items, className }) => {
         <button
           key={index}
           type="button"
-          className={`cursor-target icon-btn ${item.customClass || ""}`}
+          className={`icon-btn ${item.customClass || ""}`}
           aria-label={item.label}
         >
           <span

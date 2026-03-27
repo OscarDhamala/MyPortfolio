@@ -1,30 +1,28 @@
 
-import React, { useEffect } from "react";
-import { ThemeProvider } from "@/hooks/useTheme";
+import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 import TechStack from "@/components/TechStack";
 import Works from "@/components/Works";
 import Contact from "@/components/Contact";
-import { useIsMobile } from "@/hooks/use-mobile";
+import SpaceBackdrop from "@/components/SpaceBackdrop";
 
 const Index = () => {
-  const isMobile = useIsMobile();
-
   return (
-    <ThemeProvider>
-      <div className="min-h-screen flex flex-col overflow-hidden">
-        <Navbar />
-        <main className="flex-grow">
-          <Hero />
-          <About />
-          <TechStack />
-          <Works />
-          <Contact />
-        </main>
-      </div>
-    </ThemeProvider>
+    <div className="min-h-screen flex flex-col overflow-hidden relative">
+      <SpaceBackdrop />
+      <Navbar />
+      <main className="flex-grow relative z-10">
+        <Hero />
+        <About />
+        <Experience />
+        <TechStack />
+        <Works />
+        <Contact />
+      </main>
+    </div>
   );
 };
 

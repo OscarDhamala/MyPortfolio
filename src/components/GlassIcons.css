@@ -38,17 +38,17 @@
 }
 
 .icon-btn__back {
-  box-shadow: 0.5em -0.5em 0.75em hsla(223, 10%, 10%, 0.15);
+  box-shadow: 0.65em -0.65em 1em rgba(56, 189, 248, 0.2);
   display: block;
   transform: rotate(15deg);
   transform-origin: 100% 100%;
 }
 
 .icon-btn__front {
-  background-color: hsla(0, 0%, 100%, 0.15);
-  box-shadow: 0 0 0 0.1em hsla(0, 0%, 100%, 0.3) inset;
-  backdrop-filter: blur(0.75em);
-  -webkit-backdrop-filter: blur(0.75em);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.82), rgba(30, 41, 59, 0.62));
+  box-shadow: 0 0 0 0.1em rgba(186, 230, 253, 0.25) inset;
+  backdrop-filter: blur(1em);
+  -webkit-backdrop-filter: blur(1em);
   display: flex;
   transform-origin: 80% 50%;
 }
@@ -81,7 +81,7 @@
   left: 0;
   transform: translateY(0);
   font-weight: 600;
-  color: #333;
+  color: #dbeafe;
 }
 
 .icon-btn:focus-visible .icon-btn__back,
@@ -98,17 +98,6 @@
 .icon-btn:hover .icon-btn__label {
   opacity: 1;
   transform: translateY(20%);
-}
-
-/* Dark theme support */
-.dark .icon-btn__label {
-  color: #e5e7eb;
-}
-
-/* Terminal theme support */
-.terminal-theme .icon-btn__label {
-  color: #00ff00;
-  font-family: 'Courier New', monospace;
 }
 
 @media (min-width: 768px) {
