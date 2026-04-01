@@ -20,7 +20,7 @@ const techRows = [
     { label: "React", icon: <Atom className="w-5 h-5" /> },
     { label: "Next.js", icon: <span className="tech-pill-mark">N</span> },
     { label: "Node.js", icon: <Hexagon className="w-5 h-5" /> },
-    { label: "Laravel", icon: <FileCode className="w-5 h-5" /> },
+    { label: "PHP", icon: <FileCode className="w-5 h-5" /> },
   ],
   [
     { label: "Python", icon: <Workflow className="w-5 h-5" /> },
@@ -30,7 +30,7 @@ const techRows = [
     { label: "MongoDB", icon: <Database className="w-5 h-5" /> },
   ],
   [
-    { label: "PostgreSQL", icon: <Server className="w-5 h-5" /> },
+    { label: "SQL", icon: <Server className="w-5 h-5" /> },
     { label: "REST API", icon: <Braces className="w-5 h-5" /> },
     { label: "PowerBI", icon: <BarChart3 className="w-5 h-5" /> },
     { label: "TensorFlow", icon: <BrainCircuit className="w-5 h-5" /> },

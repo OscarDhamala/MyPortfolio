@@ -70,7 +70,7 @@ export default function Hero() {
               LinkedIn
             </a>
             <a 
-              href="https://github.com/200-ui" 
+              href="https://github.com/OscarDhamala" 
               className="btn-outline"
             >
               GitHub
