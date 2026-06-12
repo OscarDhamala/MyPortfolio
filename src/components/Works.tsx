@@ -21,7 +21,7 @@ const projects = [
     link: "https://www.youtube.com/watch?v=YiwaMS80IBo",
   },
 
-    {
+  {
     id: 3,
     title: "Clarity - Your AI powered Personal Finance Tracker",
     description: "MERN architecture integrated with AI to automatically categorize the Expense and Income as per user Input.",
@@ -65,18 +65,16 @@ export default function Works() {
       <div className="orb orb-cyan"></div>
       <div className="absolute -top-12 right-8 w-44 h-44 border border-cyan-200/15 rounded-full"></div>
       <Rocket className="absolute left-[8%] top-24 w-8 h-8 text-amber-300 rocket-fly" />
-      
+
       <div className="section-container">
-        <h2 className={`section-heading text-center transition-all duration-700 ${
-          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
+        <h2 className={`section-heading text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
           My Work
         </h2>
 
         <div
-          className={`transition-all duration-700 ${
-            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
           style={{ transitionDelay: '0.2s' }}
         >
           <div className="hanging-showcase-wrap">

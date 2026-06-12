@@ -8,6 +8,7 @@ import TechStack from "@/components/TechStack";
 import Works from "@/components/Works";
 import Contact from "@/components/Contact";
 import SpaceBackdrop from "@/components/SpaceBackdrop";
+import GlassBreakIntro from "@/components/GlassBreakIntro";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <Works />
         <Contact />
       </main>
+      <GlassBreakIntro />
     </div>
   );
 };

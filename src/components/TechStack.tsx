@@ -15,27 +15,24 @@ import {
   Workflow,
 } from "lucide-react";
 
-const techRows = [
-  [
-    { label: "React", icon: <Atom className="w-5 h-5" /> },
-    { label: "Next.js", icon: <span className="tech-pill-mark">N</span> },
-    { label: "Node.js", icon: <Hexagon className="w-5 h-5" /> },
-    { label: "PHP", icon: <FileCode className="w-5 h-5" /> },
-  ],
-  [
-    { label: "Python", icon: <Workflow className="w-5 h-5" /> },
-    { label: "Docker", icon: <Container className="w-5 h-5" /> },
-    { label: "Supabase", icon: <Layers className="w-5 h-5" /> },
-    { label: "AWS", icon: <Cloud className="w-5 h-5" /> },
-    { label: "MongoDB", icon: <Database className="w-5 h-5" /> },
-  ],
-  [
-    { label: "SQL", icon: <Server className="w-5 h-5" /> },
-    { label: "REST API", icon: <Braces className="w-5 h-5" /> },
-    { label: "PowerBI", icon: <BarChart3 className="w-5 h-5" /> },
-    { label: "TensorFlow", icon: <BrainCircuit className="w-5 h-5" /> },
-  ],
+const techStack = [
+  { label: "React", icon: <Atom className="w-5 h-5" />, orbit: "outer" },
+  { label: "Next.js", icon: <span className="tech-orbit-mark">N</span>, orbit: "outer" },
+  { label: "Node.js", icon: <Hexagon className="w-5 h-5" />, orbit: "outer" },
+  { label: "PHP", icon: <FileCode className="w-5 h-5" />, orbit: "outer" },
+  { label: "Python", icon: <Workflow className="w-5 h-5" />, orbit: "outer" },
+  { label: "Docker", icon: <Container className="w-5 h-5" />, orbit: "outer" },
+  { label: "Supabase", icon: <Layers className="w-5 h-5" />, orbit: "outer" },
+  { label: "AWS", icon: <Cloud className="w-5 h-5" />, orbit: "inner" },
+  { label: "MongoDB", icon: <Database className="w-5 h-5" />, orbit: "inner" },
+  { label: "SQL", icon: <Server className="w-5 h-5" />, orbit: "inner" },
+  { label: "REST API", icon: <Braces className="w-5 h-5" />, orbit: "inner" },
+  { label: "PowerBI", icon: <BarChart3 className="w-5 h-5" />, orbit: "inner" },
+  { label: "TensorFlow", icon: <BrainCircuit className="w-5 h-5" />, orbit: "inner" },
 ];
+
+const outerTech = techStack.filter((item) => item.orbit === "outer");
+const innerTech = techStack.filter((item) => item.orbit === "inner");
 
 export default function TechStack() {
   const { ref, inView } = useInView({
@@ -61,27 +58,54 @@ export default function TechStack() {
           }`}
           style={{ transitionDelay: '0.2s' }}
         >
-          <div className="tech-pill-board">
-            {techRows.map((row, rowIndex) => (
-              <div
-                key={`row-${rowIndex}`}
-                className="tech-pill-row"
-                style={{ animationDelay: `${rowIndex * 0.12}s` }}
-              >
-                {row.map((item, itemIndex) => (
-                  <div
-                    key={item.label}
-                    className="tech-pill"
-                    style={{ animationDelay: `${(rowIndex * 5 + itemIndex) * 0.06}s` }}
-                  >
-                    <span className="tech-pill-icon">{item.icon}</span>
-                    <span className="tech-pill-label">{item.label}</span>
+          <div className="tech-orbit-stage" aria-label="Preferred technology stack">
+            <div className="tech-orbit-glow"></div>
+            <div className="tech-orbit-track tech-orbit-track-outer"></div>
+            <div className="tech-orbit-track tech-orbit-track-inner"></div>
+
+            <div className="tech-orbit-center">
+              <BrainCircuit className="tech-orbit-center-icon" aria-hidden="true" />
+            </div>
+
+            <div className="tech-orbit tech-orbit-outer">
+              {outerTech.map((item, index) => (
+                <div
+                  key={item.label}
+                  className="tech-orbit-slot"
+                  style={
+                    {
+                      "--angle": `${(360 / outerTech.length) * index}deg`,
+                      "--delay": `${index * 0.08}s`,
+                    } as React.CSSProperties
+                  }
+                >
+                  <div className="tech-orbit-card">
+                    <span className="tech-orbit-icon">{item.icon}</span>
+                    <span className="tech-orbit-label">{item.label}</span>
                   </div>
-                ))}
-              </div>
-            ))}
-            <div className="tech-pill-glow"></div>
-            <div className="tech-pill-glow tech-pill-glow-alt"></div>
+                </div>
+              ))}
+            </div>
+
+            <div className="tech-orbit tech-orbit-inner">
+              {innerTech.map((item, index) => (
+                <div
+                  key={item.label}
+                  className="tech-orbit-slot"
+                  style={
+                    {
+                      "--angle": `${(360 / innerTech.length) * index}deg`,
+                      "--delay": `${0.28 + index * 0.08}s`,
+                    } as React.CSSProperties
+                  }
+                >
+                  <div className="tech-orbit-card">
+                    <span className="tech-orbit-icon">{item.icon}</span>
+                    <span className="tech-orbit-label">{item.label}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
