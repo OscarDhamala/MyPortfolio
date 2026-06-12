@@ -3,6 +3,26 @@ import React from "react";
 import { useInView } from 'react-intersection-observer';
 import { Code, Palette, Rocket } from "lucide-react";
 
+type RevealParagraphProps = {
+  children: string;
+  isActive: boolean;
+  delay: number;
+};
+
+function RevealParagraph({ children, isActive, delay }: RevealParagraphProps) {
+  return (
+    <p
+      className={`about-type-reveal ${isActive ? "is-revealed" : ""}`}
+      style={{ "--reveal-delay": `${delay}s` } as React.CSSProperties}
+    >
+      <span className="about-type-base">{children}</span>
+      <span className="about-type-fill" aria-hidden="true">
+        {children}
+      </span>
+    </p>
+  );
+}
+
 export default function About() {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -43,18 +63,18 @@ export default function About() {
           <div className={`order-2 lg:order-1 transition-all duration-700 transform px-3 sm:px-0 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
             style={{ transitionDelay: '0.2s' }}>
-            <div className="text-base sm:text-lg leading-relaxed space-y-4 sm:space-y-6 text-slate-300">
-              <p>
+            <div className="text-base sm:text-lg leading-relaxed space-y-4 sm:space-y-6">
+              <RevealParagraph isActive={inView} delay={0.38}>
                 Hi! I'm Oscar, a passionate full-stack developer with experience in building web applications. I love turning problems into simple, beautiful, and intuitive solutions.
-              </p>
+              </RevealParagraph>
 
-              <p>
+              <RevealParagraph isActive={inView} delay={1.05}>
                 When I'm always learning to code, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while planning my next project.
-              </p>
+              </RevealParagraph>
 
-              <p>
+              <RevealParagraph isActive={inView} delay={1.72}>
                 My goal is to create digital experiences that not only look great but also provide real value to users and businesses.
-              </p>
+              </RevealParagraph>
             </div>
           </div>
 

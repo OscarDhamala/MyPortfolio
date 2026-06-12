@@ -641,6 +641,53 @@
     animation: spin 26s linear infinite;
   }
 
+  .about-type-reveal {
+    --reveal-delay: 0s;
+    position: relative;
+    margin: 0;
+    color: rgba(203, 213, 225, 0.58);
+  }
+
+  .about-type-base {
+    color: rgba(203, 213, 225, 0.6);
+  }
+
+  .about-type-fill {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    color: #ffffff;
+    white-space: pre-wrap;
+    clip-path: inset(0 100% 0 0);
+    text-shadow: 0 0 18px rgba(255, 255, 255, 0.14);
+    animation-fill-mode: forwards;
+    pointer-events: none;
+  }
+
+  .about-type-fill::after {
+    content: '';
+    position: absolute;
+    top: 0.18em;
+    bottom: 0.18em;
+    right: 0;
+    width: 2px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.95), transparent);
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.52);
+    opacity: 0;
+  }
+
+  .about-type-reveal.is-revealed .about-type-fill {
+    animation: about-text-reveal 2.65s steps(72, end) var(--reveal-delay) forwards;
+  }
+
+  .about-type-reveal.is-revealed .about-type-fill::after {
+    animation:
+      about-caret-in 0.01s linear var(--reveal-delay) forwards,
+      about-caret-blink 0.78s step-end var(--reveal-delay) infinite,
+      about-caret-out 0.2s ease calc(var(--reveal-delay) + 2.65s) forwards;
+  }
+
   .tech-orbit-ring {
     position: absolute;
     width: 440px;
@@ -1788,6 +1835,37 @@
   }
 }
 
+@keyframes about-text-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes about-caret-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes about-caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.28;
+  }
+}
+
+@keyframes about-caret-out {
+  to {
+    opacity: 0;
+  }
+}
+
 .swing-animation {
   animation: swing 10s ease-in-out infinite;
   transform-origin: 50% -100px;
@@ -1827,6 +1905,15 @@
 
   .glass-shard {
     animation-duration: 0.18s;
+  }
+
+  .about-type-reveal.is-revealed .about-type-fill {
+    clip-path: inset(0 0 0 0);
+    animation: none;
+  }
+
+  .about-type-fill::after {
+    display: none;
   }
 }
 
