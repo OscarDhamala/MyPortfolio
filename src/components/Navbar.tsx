@@ -37,7 +37,7 @@ export default function Navbar() {
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-500 border-b ${
         isScrolled
-          ? "bg-slate-950/70 shadow-[0_10px_40px_rgba(2,6,23,0.45)] backdrop-blur-xl border-cyan-300/20"
+          ? "bg-stone-950/70 shadow-[0_10px_40px_rgba(12,10,9,0.45)] backdrop-blur-xl border-cyan-300/20"
           : "bg-transparent border-transparent"
       }`}
     >
@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="flex items-center">
           <a
             href="#home"
-            className="text-xl md:text-2xl font-bold tracking-tight text-slate-100 transition duration-300 hover:text-cyan-300 flex items-center gap-2"
+            className="text-xl md:text-2xl font-bold tracking-tight text-stone-100 transition duration-300 hover:text-cyan-300 flex items-center gap-2"
           >
             <Orbit className="w-5 h-5 text-violet-300" />
             Oscar Dhamala
@@ -59,7 +59,7 @@ export default function Navbar() {
               <a 
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-slate-300 hover:text-cyan-300 transition-colors duration-200 nav-link-space"
+                className="text-sm font-medium text-stone-300 hover:text-cyan-300 transition-colors duration-200 nav-link-space"
               >
                 {link.name}
               </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
           <Rocket className="w-4 h-4 text-amber-300 rocket-fly-slow" />
           <button
             onClick={toggleMenu}
-            className="p-2 rounded-md text-slate-200 hover:text-cyan-300 transition-colors"
+            className="p-2 rounded-md text-stone-200 hover:text-cyan-300 transition-colors"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -86,14 +86,14 @@ export default function Navbar() {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-slate-950/95 backdrop-blur-xl border-t border-cyan-300/20">
+        <div className="md:hidden bg-stone-950/95 backdrop-blur-xl border-t border-cyan-300/20">
           <div className="flex flex-col py-4 space-y-4 px-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={closeMenu}
-                className="text-lg font-medium text-slate-200 hover:text-cyan-300 transition-colors"
+                className="text-lg font-medium text-stone-200 hover:text-cyan-300 transition-colors"
               >
                 {link.name}
               </a>

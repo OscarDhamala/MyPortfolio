@@ -58,7 +58,7 @@ export default function Hero() {
             Mission: Building Digital Products
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 hero-title flex flex-col gap-2">
-            <span className="text-4xl md:text-5xl text-slate-300 min-h-[1.2em] transition-opacity duration-500">
+            <span className="text-4xl md:text-5xl text-stone-300 min-h-[1.2em] transition-opacity duration-500">
               {greetings[greetingIndex]}
             </span>
             <span>
@@ -68,7 +68,7 @@ export default function Hero() {
           </h1>
 
           <h2
-            className={`text-2xl md:text-3xl mb-8 transition-opacity duration-700 text-slate-300/85 ${isTypingComplete ? 'opacity-100' : 'opacity-0'}`}
+            className={`text-2xl md:text-3xl mb-8 transition-opacity duration-700 text-stone-300/85 ${isTypingComplete ? 'opacity-100' : 'opacity-0'}`}
             style={{ transitionDelay: "0.5s" }}
           >
             Software Engineer
@@ -103,9 +103,9 @@ export default function Hero() {
             }}
           >
             <div className="relative w-full max-w-md mx-auto aspect-square flex items-center justify-center">
-              <div className="absolute inset-0 bg-slate-800/20 rounded-full blur-3xl animate-pulse-slow"></div>
+              <div className="absolute inset-0 bg-stone-800/20 rounded-full blur-3xl animate-pulse-slow"></div>
               <HeroLottie />
-              <div className="absolute top-8 right-0 bg-slate-800/80 backdrop-blur-md border border-slate-600/50 text-slate-200 px-6 py-3 rounded-2xl rounded-bl-sm z-20 shadow-xl animate-fade-in">
+              <div className="absolute top-8 right-0 bg-stone-800/80 backdrop-blur-md border border-stone-600/50 text-stone-200 px-6 py-3 rounded-2xl rounded-bl-sm z-20 shadow-xl animate-fade-in">
                 <p className="font-semibold text-lg">{greetings[greetingIndex]}</p>
               </div>
             </div>

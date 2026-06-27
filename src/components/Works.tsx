@@ -87,29 +87,29 @@ export default function Works() {
                   alt={activeProject.title}
                   className="hanging-project-image"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent"></div>
                 <a
                   href={activeProject.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute right-4 top-4 p-3 rounded-full bg-cyan-500 text-slate-950 hover:bg-cyan-300 transition-colors"
+                  className="absolute right-4 top-4 p-3 rounded-full bg-cyan-500 text-stone-950 hover:bg-cyan-300 transition-colors"
                 >
                   <ExternalLink className="w-5 h-5" />
                 </a>
               </div>
 
               <div className="p-5 md:p-6">
-                <h3 className="text-lg md:text-xl font-bold mb-3 text-slate-100">
+                <h3 className="text-lg md:text-xl font-bold mb-3 text-stone-100">
                   {activeProject.title}
                 </h3>
-                <p className="mb-4 text-slate-300 text-sm md:text-base leading-relaxed">
+                <p className="mb-4 text-stone-300 text-sm md:text-base leading-relaxed">
                   {activeProject.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {activeProject.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs px-3 py-1 rounded-full border border-cyan-200/25 bg-slate-900/70 text-cyan-100"
+                      className="text-xs px-3 py-1 rounded-full border border-cyan-200/25 bg-stone-900/70 text-cyan-100"
                     >
                       {tag}
                     </span>

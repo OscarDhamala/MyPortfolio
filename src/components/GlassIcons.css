@@ -45,7 +45,7 @@
 }
 
 .icon-btn__front {
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.82), rgba(30, 41, 59, 0.62));
+  background: linear-gradient(145deg, rgba(28, 25, 23, 0.82), rgba(41, 37, 36, 0.62));
   box-shadow: 0 0 0 0.1em rgba(186, 230, 253, 0.25) inset;
   backdrop-filter: blur(1em);
   -webkit-backdrop-filter: blur(1em);

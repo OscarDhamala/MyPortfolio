@@ -83,29 +83,29 @@ const ExperienceCard = ({
       <div
         className="glass-panel w-full max-h-full overflow-y-auto p-5 sm:p-8 md:p-14 rounded-[2rem] transition-all duration-700"
         style={{
-          background: 'linear-gradient(160deg, rgba(20, 24, 38, 0.4), rgba(12, 16, 28, 0.2))',
+          background: 'linear-gradient(160deg, rgba(28, 25, 23, 0.4), rgba(20, 18, 16, 0.2))',
           border: '1px solid rgba(255, 255, 255, 0.08)',
           boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.05), 0 20px 40px rgba(0,0,0,0.4)',
         }}
       >
-        <div className="text-slate-500 text-xs md:text-sm tracking-[0.15em] uppercase mb-4 md:mb-6 font-semibold flex flex-wrap items-center gap-3">
+        <div className="text-stone-500 text-xs md:text-sm tracking-[0.15em] uppercase mb-4 md:mb-6 font-semibold flex flex-wrap items-center gap-3">
           <span>{step.phase}</span>
-          <span className="text-slate-700">•</span>
+          <span className="text-stone-700">•</span>
           <span>{step.period}</span>
         </div>
 
-        <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-100 mb-6 tracking-tight font-sora">
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-stone-100 mb-6 tracking-tight font-sora">
           {step.title}
         </h3>
 
-        <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-6">
+        <p className="text-stone-400 text-base md:text-lg leading-relaxed mb-6">
           {step.description}
         </p>
 
         <ul className="space-y-2 mt-6">
           {step.points.map((point, i) => (
-            <li key={i} className="flex items-start gap-3 text-slate-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-slate-600 mt-2.5 flex-shrink-0"></span>
+            <li key={i} className="flex items-start gap-3 text-stone-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-stone-600 mt-2.5 flex-shrink-0"></span>
               <span className="text-sm md:text-base">{point}</span>
             </li>
           ))}
@@ -272,7 +272,7 @@ export default function Experience() {
             <h2 className="section-heading">
               Professional Path
             </h2>
-            <p className="mb-12 hidden text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 md:mb-16 md:block">
+            <p className="mb-12 hidden text-xs font-semibold uppercase tracking-[0.2em] text-stone-500 md:mb-16 md:block">
               Scroll to explore
             </p>
 
@@ -290,12 +290,12 @@ export default function Experience() {
                   }`}
                 >
                   {displayedCardIndex === idx && (
-                    <div className="absolute left-[2px] top-1/2 h-8 w-[4px] -translate-y-1/2 rounded-full bg-slate-200 shadow-[0_0_12px_rgba(255,255,255,0.6)]"></div>
+                    <div className="absolute left-[2px] top-1/2 h-8 w-[4px] -translate-y-1/2 rounded-full bg-stone-200 shadow-[0_0_12px_rgba(255,255,255,0.6)]"></div>
                   )}
-                  <h4 className="mb-1 text-lg font-medium text-slate-200">
+                  <h4 className="mb-1 text-lg font-medium text-stone-200">
                     {step.title}
                   </h4>
-                  <p className="text-sm font-medium text-slate-500">
+                  <p className="text-sm font-medium text-stone-500">
                     {step.period}
                   </p>
                 </div>
@@ -331,7 +331,7 @@ export default function Experience() {
                 href="/uploads/OscarDhamala_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-3 rounded-full border border-cyan-200/25 bg-white/[0.07] px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.18em] text-slate-100 shadow-[0_18px_45px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.16)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-cyan-100/50 hover:bg-white/[0.11] hover:shadow-[0_24px_60px_rgba(34,211,238,0.16)]"
+                className="group inline-flex items-center justify-center gap-3 rounded-full border border-cyan-200/25 bg-white/[0.07] px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.18em] text-stone-100 shadow-[0_18px_45px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.16)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-cyan-100/50 hover:bg-white/[0.11] hover:shadow-[0_24px_60px_rgba(34,211,238,0.16)]"
               >
                 <Download className="h-4 w-4 transition-transform duration-500 group-hover:translate-y-0.5" />
                 View Full CV

@@ -109,10 +109,10 @@ export default function About() {
                 style={{ animationDelay: `${1.2 + index * 0.3}s` }}>
                 <feature.icon className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-slate-100">
+              <h3 className="text-xl font-bold mb-3 text-stone-100">
                 {feature.title}
               </h3>
-              <p className="text-slate-300">
+              <p className="text-stone-300">
                 {feature.description}
               </p>
             </div>

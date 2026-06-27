@@ -24,10 +24,10 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Contact Information */}
           <div className="glass-panel rounded-3xl p-8 space-card">
-            <h3 className="text-2xl font-bold mb-6 text-slate-100">
+            <h3 className="text-2xl font-bold mb-6 text-stone-100">
               Let's Connect
             </h3>
-            <p className="text-lg mb-8 text-slate-300">
+            <p className="text-lg mb-8 text-stone-300">
               Have a project in mind or just want to say hi? Feel free to reach out through any of the channels below.
             </p>
             
@@ -37,8 +37,8 @@ export default function Contact() {
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-slate-100">Email</h4>
-                  <p className="text-slate-300">
+                  <h4 className="font-medium text-stone-100">Email</h4>
+                  <p className="text-stone-300">
                     oscardhamala117@gmail.com
                   </p>
                 </div>
@@ -49,8 +49,8 @@ export default function Contact() {
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-slate-100">Phone</h4>
-                  <p className="text-slate-300">
+                  <h4 className="font-medium text-stone-100">Phone</h4>
+                  <p className="text-stone-300">
                     +977-9869112525
                   </p>
                 </div>
@@ -61,8 +61,8 @@ export default function Contact() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-slate-100">Location</h4>
-                  <p className="text-slate-300">
+                  <h4 className="font-medium text-stone-100">Location</h4>
+                  <p className="text-stone-300">
                     Nepal
                   </p>
                 </div>
@@ -74,7 +74,7 @@ export default function Contact() {
           <div className="flex justify-center items-center">
             <div className="relative">
               <Satellite className="w-5 h-5 text-amber-300 mx-auto mb-3 rocket-fly-slow" />
-              <h3 className="text-2xl font-bold mb-8 text-center text-slate-100">
+              <h3 className="text-2xl font-bold mb-8 text-center text-stone-100">
                 Message Me Directly
               </h3>
               
@@ -82,17 +82,17 @@ export default function Contact() {
                 {/* WhatsApp Icon with Rope */}
                 <div className="relative">
                   {/* Rope */}
-                  <div className="w-1 h-24 mx-auto mb-2 rounded bg-slate-300/50"></div>
+                  <div className="w-1 h-24 mx-auto mb-2 rounded bg-stone-300/50"></div>
                   
                   {/* Swinging WhatsApp Icon */}
                   <div 
-                    className="swing-animation w-16 h-16 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 bg-gradient-to-br from-emerald-400 to-cyan-500 text-slate-950 shadow-[0_12px_24px_rgba(16,185,129,0.35)]"
+                    className="swing-animation w-16 h-16 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 bg-gradient-to-br from-emerald-400 to-cyan-500 text-stone-950 shadow-[0_12px_24px_rgba(16,185,129,0.35)]"
                     onClick={handleWhatsAppClick}
                   >
                     <MessageCircle className="w-8 h-8" />
                   </div>
                   
-                  <p className="text-center mt-3 font-medium text-slate-200">
+                  <p className="text-center mt-3 font-medium text-stone-200">
                     WhatsApp
                   </p>
                 </div>
@@ -100,17 +100,17 @@ export default function Contact() {
                 {/* Email Icon with Rope */}
                 <div className="relative">
                   {/* Rope */}
-                  <div className="w-1 h-24 mx-auto mb-2 rounded bg-slate-300/50"></div>
+                  <div className="w-1 h-24 mx-auto mb-2 rounded bg-stone-300/50"></div>
                   
                   {/* Swinging Email Icon */}
                   <div 
-                    className="swing-animation-delayed w-16 h-16 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 bg-gradient-to-br from-cyan-400 to-indigo-500 text-slate-950 shadow-[0_12px_24px_rgba(56,189,248,0.35)]"
+                    className="swing-animation-delayed w-16 h-16 rounded-2xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-110 bg-gradient-to-br from-cyan-400 to-indigo-500 text-stone-950 shadow-[0_12px_24px_rgba(56,189,248,0.35)]"
                     onClick={handleEmailClick}
                   >
                     <Mail className="w-8 h-8" />
                   </div>
                   
-                  <p className="text-center mt-3 font-medium text-slate-200">
+                  <p className="text-center mt-3 font-medium text-stone-200">
                     Email
                   </p>
                 </div>
