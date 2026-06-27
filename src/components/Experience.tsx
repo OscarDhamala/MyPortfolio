@@ -269,7 +269,7 @@ export default function Experience() {
       <div className="flex h-full w-full items-center justify-center overflow-hidden py-8 md:py-0">
         <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center gap-6 px-6 md:h-[75vh] md:flex-row md:gap-10 lg:gap-24 lg:px-8">
           <div className="flex h-full w-full flex-col justify-center md:w-1/3">
-            <h2 className="mb-6 font-sora text-4xl font-medium tracking-tight text-slate-100 md:text-5xl">
+            <h2 className="section-heading">
               Professional Path
             </h2>
             <p className="mb-12 hidden text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 md:mb-16 md:block">
