@@ -65,7 +65,7 @@ export default function About() {
             style={{ transitionDelay: '0.2s' }}>
             <div className="text-base sm:text-lg leading-relaxed space-y-4 sm:space-y-6">
               <RevealParagraph isActive={inView} delay={0.38}>
-                Hi! I'm Oscar, a passionate full-stack developer with experience in building web applications. I love turning problems into simple, beautiful, and intuitive solutions.
+                Hi! I'm Oscar, a full-stack engineer with experience in building web applications. I love turning problems into simple, beautiful, and intuitive solutions.
               </RevealParagraph>
 
               <RevealParagraph isActive={inView} delay={1.05}>

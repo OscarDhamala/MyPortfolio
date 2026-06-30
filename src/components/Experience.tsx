@@ -305,7 +305,7 @@ export default function Experience() {
           </div>
 
           <div className="flex w-full flex-col items-center md:w-2/3">
-            <div className="relative h-[50vh] w-full overflow-hidden sm:h-[56vh] md:h-[61vh]">
+            <div className="relative mt-56 h-[50vh] w-full overflow-hidden sm:h-[56vh] md:h-[61vh] md:mt-60">
               {journeySteps.map((step, idx) => (
                 <ExperienceCard
                   key={idx}
