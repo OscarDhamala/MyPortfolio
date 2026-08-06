@@ -87,7 +87,7 @@ export default function About() {
               <div className="absolute -inset-6 rounded-full bg-gradient-to-r from-cyan-500/30 to-indigo-500/30 blur-2xl opacity-60"></div>
               <div className="relative w-80 h-80 rounded-[9.5rem] overflow-hidden border border-cyan-200/30 shadow-[0_20px_70px_rgba(14,116,144,0.35)] animate-float-slow hover:-translate-y-2 transition-transform duration-500 profile-planet">
                 <img
-                  src="/uploads/Photo.png"
+                  src="/uploads/Profile_Image.png"
                   alt="Oscar Dhamala"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
