@@ -7,7 +7,7 @@ export default function Footer() {
         Oscar Dhamala
       </div>
       <p className="site-footer-caption">Building for you</p>
-      <p className="site-footer-copyright">© {new Date().getFullYear()} Oscar Dhamala</p>
+      <p className="site-footer-copyright">© 2025 All rights reserved</p>
     </footer>
   );
 }

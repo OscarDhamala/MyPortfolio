@@ -2233,6 +2233,25 @@
 }
 
 @media (max-width: 768px) {
+  .experience-sidebar {
+    height: auto !important;
+    flex: 0 0 auto;
+    justify-content: flex-start !important;
+  }
+
+  .experience-content {
+    height: calc(100% - 7rem);
+    min-height: 0;
+    flex: 1 1 auto;
+    justify-content: flex-start;
+  }
+
+  .experience-card-viewport {
+    height: 58vh !important;
+    margin-top: 0.75rem !important;
+    min-height: 0;
+  }
+
   .rocket-intro-copy {
     width: min(94vw, 420px);
     flex-direction: column;

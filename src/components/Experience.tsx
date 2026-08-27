@@ -275,12 +275,12 @@ export default function Experience() {
     <section
       ref={sectionRef}
       id="experience"
-      className="relative w-full h-screen overflow-hidden flex items-center justify-center"
+      className="experience-section relative w-full h-screen overflow-hidden flex items-center justify-center"
       style={{ backgroundColor: "transparent" }}
     >
       <div className="flex h-full w-full items-center justify-center overflow-hidden py-8 md:py-0">
         <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center gap-6 px-6 md:h-[75vh] md:flex-row md:gap-10 lg:gap-24 lg:px-8">
-          <div className="flex h-full w-full flex-col justify-center md:w-1/3">
+          <div className="experience-sidebar flex h-full w-full flex-col justify-center md:w-1/3">
             <h2 className="section-heading">
               Professional Path
             </h2>
@@ -316,8 +316,8 @@ export default function Experience() {
 
           </div>
 
-          <div className="flex w-full flex-col items-center md:w-2/3">
-            <div className="relative mt-56 h-[50vh] w-full overflow-hidden sm:h-[56vh] md:h-[61vh] md:mt-60">
+          <div className="experience-content flex w-full flex-col items-center md:w-2/3">
+            <div className="experience-card-viewport relative mt-56 h-[50vh] w-full overflow-hidden sm:h-[56vh] md:h-[61vh] md:mt-60">
               {journeySteps.map((step, idx) => (
                 <ExperienceCard
                   key={idx}
