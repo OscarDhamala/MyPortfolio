@@ -101,20 +101,22 @@ export default function About() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`text-center p-6 rounded-2xl transition-all duration-700 transform hover:-translate-y-2 glass-panel space-card ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+              className={`about-feature-card ${inView ? 'is-visible' : ''}`}
               style={{ transitionDelay: `${0.6 + index * 0.2}s` }}
             >
-              <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center transition-all duration-500 hover:scale-110 bg-gradient-to-br from-cyan-500 to-indigo-600 text-white shadow-[0_12px_28px_rgba(34,211,238,0.35)] ${inView ? 'animate-float-slow' : ''}`}
-                style={{ animationDelay: `${1.2 + index * 0.3}s` }}>
-                <feature.icon className="w-8 h-8" />
+              <div className="about-feature-glow"></div>
+              <div className="about-feature-icon-wrap">
+                <div className="about-feature-icon">
+                  <feature.icon className="w-8 h-8" />
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-stone-100">
+              <h3 className="about-feature-title">
                 {feature.title}
               </h3>
-              <p className="text-stone-300">
+              <p className="about-feature-desc">
                 {feature.description}
               </p>
+              <div className="about-feature-accent"></div>
             </div>
           ))}
         </div>
