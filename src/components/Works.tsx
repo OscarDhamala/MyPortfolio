@@ -99,7 +99,7 @@ export default function Works() {
               </div>
 
               <div className="p-5 md:p-6">
-                <h3 className="text-lg md:text-xl font-bold mb-3 text-stone-100">
+                <h3 className="text-lg md:text-xl font-semibold mb-3 text-stone-100">
                   {activeProject.title}
                 </h3>
                 <p className="mb-4 text-stone-300 text-sm md:text-base leading-relaxed">

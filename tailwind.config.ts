@@ -59,7 +59,9 @@ export default {
 				},
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
+				sans: ['Manrope', 'sans-serif'],
+				display: ['Bricolage Grotesque', 'sans-serif'],
+				sora: ['Bricolage Grotesque', 'sans-serif'],
 				mono: ['"JetBrains Mono"', 'monospace'],
 			},
 			borderRadius: {

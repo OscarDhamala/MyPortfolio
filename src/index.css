@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sora:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -51,9 +51,10 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 400;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.012em;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-image:
@@ -70,9 +71,12 @@
   h4,
   h5,
   h6 {
-    font-family: 'Sora', sans-serif;
-    letter-spacing: -0.03em;
-    font-weight: 700;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: 'wdth' 92;
+    letter-spacing: -0.045em;
+    font-weight: 650;
+    line-height: 0.98;
   }
 }
 
@@ -221,8 +225,42 @@
     overflow-x: clip;
   }
 
+  .site-footer {
+    width: 100%;
+    padding: clamp(4.5rem, 11vw, 8rem) 1.5rem 2.5rem;
+    text-align: center;
+    border-top: 1px solid rgba(186, 230, 253, 0.1);
+    background: linear-gradient(180deg, rgba(12, 10, 9, 0.15), rgba(12, 10, 9, 0.72));
+  }
+
+  .site-footer-signature {
+    font-family: 'Allura', cursive;
+    font-size: clamp(4.5rem, 14vw, 10rem);
+    line-height: 0.9;
+    letter-spacing: 0.01em;
+    color: #f5f5f4;
+    text-shadow: 0 0 32px rgba(103, 232, 249, 0.16);
+    user-select: none;
+  }
+
+  .site-footer-caption {
+    margin: 1.75rem 0 0.75rem;
+    color: rgba(186, 230, 253, 0.68);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .site-footer-copyright {
+    margin: 0;
+    color: rgba(168, 162, 158, 0.65);
+    font-size: 0.75rem;
+  }
+
   .section-heading {
-    @apply text-4xl md:text-5xl font-bold mb-12 relative pb-4 inline-block text-stone-100;
+    @apply text-4xl md:text-5xl font-semibold mb-12 relative pb-4 inline-block text-stone-100;
+    letter-spacing: -0.055em;
   }
 
   .section-heading::after {
@@ -261,6 +299,7 @@
 
   .btn-primary {
     @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300;
+    letter-spacing: -0.015em;
     color: #ffffff;
     background: linear-gradient(120deg, rgba(80, 80, 80, 0.9), rgba(40, 40, 40, 0.82));
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -275,6 +314,7 @@
 
   .btn-outline {
     @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300 border;
+    letter-spacing: -0.015em;
     border-color: rgba(196, 181, 253, 0.42);
     color: #ddd6fe;
     background: rgba(41, 37, 36, 0.42);
@@ -290,6 +330,9 @@
     border-radius: 999px;
     padding: 0.45rem 0.9rem;
     font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
     color: #c4b5fd;
     background: rgba(28, 25, 23, 0.64);
     box-shadow: inset 0 1px 0 rgba(224, 242, 254, 0.2);
@@ -478,9 +521,10 @@
     border: 1px solid rgba(224, 242, 254, 0.42);
     border-radius: 0.8rem;
     color: #fff;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-size: 0.94rem;
-    font-weight: 800;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
   }
@@ -684,9 +728,10 @@
       inset 0 1px 0 rgba(255, 255, 255, 0.22),
       0 20px 46px rgba(12, 10, 9, 0.46),
       0 0 34px rgba(34, 211, 238, 0.16);
-    font-family: 'Sora', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-size: clamp(0.94rem, 2.5vw, 1.1rem);
-    font-weight: 800;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     line-height: 1.1;
     cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -921,7 +966,7 @@
     border: 1px solid rgba(168, 162, 158, 0.15);
     background: linear-gradient(160deg, rgba(12, 10, 9, 0.92), rgba(28, 25, 23, 0.85));
     color: #d6d3d1;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-size: 0.58rem;
     font-weight: 500;
     line-height: 1.25;
@@ -1066,7 +1111,7 @@
   }
 
   .about-feature-title {
-    font-family: 'Sora', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -1081,7 +1126,7 @@
 
   .about-feature-desc {
     color: #a8a29e;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 0.98rem;
     font-weight: 400;
     line-height: 1.7;
@@ -1169,7 +1214,7 @@
 
   .tech-tile-label {
     color: #e7e5e4;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-size: 0.88rem;
     font-weight: 650;
     line-height: 1.1;

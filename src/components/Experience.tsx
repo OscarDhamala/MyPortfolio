@@ -4,14 +4,14 @@ import { Download } from "lucide-react";
 const journeySteps = [
   {
     phase: "Phase 01",
-    title: "AI Content Generator",
-    period: "Mar - Jul 2025",
+    title: "Associate Software Engineer (LeftclickTech)",
+    period: "Apr 2026 - Present",
     description:
-      "Generated and optimized AI content while improving response quality through practical prompt engineering.",
+      "Developed a full-stack, in-house human resources and leave management system.",
     points: [
-      "Generated and optimized content using AI workflows.",
-      "Built prompt patterns for accurate and consistent responses.",
-      "Researched market trends and tools for better output quality.",
+      "Built check-in/out, automatic invoice generation, email sending, ticketing, leave calendar, and leave balancing features.",
+      "Developed automation workflows for AI content generation and bulk email.",
+      "Worked closely with different LLMs and AI agents.",
     ],
   },
   {
@@ -28,6 +28,18 @@ const journeySteps = [
   },
   {
     phase: "Phase 03",
+    title: "AI Content Generator",
+    period: "Mar - Jul 2025",
+    description:
+      "Generated and optimized AI content while improving response quality through practical prompt engineering.",
+    points: [
+      "Generated and optimized content using AI workflows.",
+      "Built prompt patterns for accurate and consistent responses.",
+      "Researched market trends and tools for better output quality.",
+    ],
+  },
+  {
+    phase: "Phase 04",
     title: "Achievements",
     period: "TBC Startup Fest",
     description:
@@ -38,7 +50,7 @@ const journeySteps = [
     ],
   },
   {
-    phase: "Phase 04",
+    phase: "Phase 05",
     title: "Education and Certifications",
     period: "2023 - 2026",
     description:
@@ -94,7 +106,7 @@ const ExperienceCard = ({
           <span>{step.period}</span>
         </div>
 
-        <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-stone-100 mb-6 tracking-tight font-sora">
+        <h3 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-stone-100 mb-6 tracking-tight">
           {step.title}
         </h3>
 

@@ -57,8 +57,8 @@ export default function Hero() {
             <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>
             Mission: Building Digital Products
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 hero-title flex flex-col gap-2">
-            <span className="text-4xl md:text-5xl text-stone-300 min-h-[1.2em] transition-opacity duration-500">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 hero-title flex flex-col gap-2">
+            <span className="text-4xl md:text-5xl font-medium text-stone-300 min-h-[1.2em] transition-opacity duration-500">
               {greetings[greetingIndex]}
             </span>
             <span>
@@ -68,7 +68,7 @@ export default function Hero() {
           </h1>
 
           <h2
-            className={`text-2xl md:text-3xl mb-8 transition-opacity duration-700 text-stone-300/85 ${isTypingComplete ? 'opacity-100' : 'opacity-0'}`}
+            className={`text-2xl md:text-3xl font-medium mb-8 transition-opacity duration-700 text-stone-300/85 ${isTypingComplete ? 'opacity-100' : 'opacity-0'}`}
             style={{ transitionDelay: "0.5s" }}
           >
             Software Engineer

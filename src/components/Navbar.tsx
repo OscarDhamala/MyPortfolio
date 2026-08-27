@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="flex items-center">
           <a
             href="#home"
-            className="text-xl md:text-2xl font-bold tracking-tight text-stone-100 transition duration-300 hover:text-cyan-300 flex items-center gap-2"
+            className="font-display text-xl md:text-2xl font-semibold tracking-[-0.045em] text-stone-100 transition duration-300 hover:text-cyan-300 flex items-center gap-2"
           >
             <Orbit className="w-5 h-5 text-violet-300" />
             Oscar Dhamala
