@@ -1,13 +1,16 @@
-import React from "react";
+import { NAV_LINKS } from "@/data/portfolioData";
 
 export default function Footer() {
   return (
-    <footer className="site-footer relative z-10" aria-label="Footer">
-      <div className="site-footer-signature" aria-label="Oscar Dhamala">
-        Oscar Dhamala
+    <footer className="nx-footer" aria-label="Footer">
+      <div className="nx-footer-brand">OSCAR DHAMALA</div>
+      <div className="nx-footer-links">
+        {NAV_LINKS.map((link) => (
+          <a key={link.id} href={`#${link.id}`}>
+            {link.label}
+          </a>
+        ))}
       </div>
-      <p className="site-footer-caption">Building for you</p>
-      <p className="site-footer-copyright">© 2025 All rights reserved</p>
     </footer>
   );
 }
