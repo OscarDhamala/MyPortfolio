@@ -59,9 +59,9 @@ export default {
 				},
 			},
 			fontFamily: {
-				sans: ['Manrope', 'sans-serif'],
-				display: ['Bricolage Grotesque', 'sans-serif'],
-				sora: ['Bricolage Grotesque', 'sans-serif'],
+				sans: ['Inter', 'sans-serif'],
+				display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+				sora: ['"Bebas Neue"', 'Impact', 'sans-serif'],
 				mono: ['"JetBrains Mono"', 'monospace'],
 			},
 			borderRadius: {
