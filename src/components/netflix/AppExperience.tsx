@@ -4,7 +4,6 @@ import HeroBanner from "./HeroBanner";
 import ExperienceRow from "./ExperienceRow";
 import ProjectsRow from "./ProjectsRow";
 import TechRow from "./TechRow";
-import AboutSection from "./AboutSection";
 import ContactBanner from "./ContactBanner";
 import DetailModal from "./DetailModal";
 import Footer from "@/components/Footer";
@@ -56,7 +55,6 @@ export default function AppExperience({ profile, onSwitchProfile, onBackToProfil
       {profile.order
         .filter((key): key is Exclude<RowKey, "about"> => key !== "about")
         .map((key) => renderRow(key))}
-      <AboutSection />
       <ContactBanner />
       <Footer />
       <DetailModal modal={modal} onClose={() => setModal(null)} />
