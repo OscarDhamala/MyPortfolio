@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -59,6 +59,7 @@
     --nx-cyan-ghost: rgba(94, 222, 255, 0.14);
     --nx-violet-ghost: rgba(167, 139, 250, 0.12);
     --nx-font-display: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
+    --nx-font-signature: 'Great Vibes', cursive;
     --nx-font-body: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
     --nx-shadow-card: 0 24px 55px rgba(0, 0, 0, 0.6);
   }
@@ -201,6 +202,36 @@
   .nx-gate-enter:focus-visible {
     outline: 2px solid #fff;
     outline-offset: 3px;
+  }
+  .nx-gate-enter:disabled {
+    opacity: 0.75;
+    cursor: default;
+    transform: none;
+  }
+  .nx-gate-logo-boom {
+    animation: nxGateBoom 4.1s ease-in-out forwards;
+  }
+  @keyframes nxGateBoom {
+    0%,
+    100% {
+      transform: scale(1);
+      text-shadow: 0 0 60px var(--nx-red-glow), 0 0 12px rgba(229, 9, 20, 0.4);
+    }
+    8% {
+      transform: scale(1.08);
+      text-shadow: 0 0 90px var(--nx-red-glow), 0 0 30px rgba(229, 9, 20, 0.7);
+    }
+    20% {
+      transform: scale(1);
+    }
+    55% {
+      transform: scale(1.05);
+      text-shadow: 0 0 100px var(--nx-red-glow), 0 0 34px rgba(229, 9, 20, 0.75);
+    }
+    72% {
+      transform: scale(1);
+      text-shadow: 0 0 60px var(--nx-red-glow), 0 0 12px rgba(229, 9, 20, 0.4);
+    }
   }
 
   /* ---------- Profile picker ---------- */
@@ -588,6 +619,7 @@
     position: relative;
     z-index: 2;
     max-width: 640px;
+    margin-top: 15px;
   }
   .nx-hero-eyebrow {
     font-size: 0.75rem;
@@ -694,6 +726,9 @@
   .nx-row {
     padding: 34px clamp(16px, 4vw, 60px) 6px;
     position: relative;
+  }
+  #experience.nx-row {
+    margin-top: 70px;
   }
   .nx-row-head {
     display: flex;
@@ -1011,54 +1046,6 @@
     padding: 0 6px;
   }
 
-  /* about */
-  .nx-about-section {
-    padding: 32px clamp(16px, 4vw, 60px) 20px;
-  }
-  .nx-about-grid {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: clamp(24px, 5vw, 60px);
-    align-items: center;
-  }
-  .nx-about-photo-wrap {
-    position: sticky;
-    top: 110px;
-  }
-  .nx-about-photo {
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid var(--nx-line);
-    box-shadow: var(--nx-shadow-card);
-    aspect-ratio: 3 / 4;
-  }
-  .nx-about-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .nx-about-name {
-    font-family: var(--nx-font-display);
-    font-size: 1.5rem;
-    margin-top: 14px;
-    letter-spacing: 0.02em;
-  }
-  .nx-about-role {
-    color: var(--nx-text-faint);
-    font-size: 0.85rem;
-    font-weight: 600;
-  }
-  .nx-about-body p {
-    color: var(--nx-text-dim);
-    line-height: 1.75;
-    font-size: 1.02rem;
-    max-width: 64ch;
-    margin: 0 0 18px;
-  }
-  .nx-about-body p:first-child {
-    color: var(--nx-text);
-    font-size: 1.12rem;
-  }
   /* contact banner */
   .nx-contact-banner {
     margin: 64px clamp(16px, 4vw, 60px) 0;
@@ -1160,10 +1147,12 @@
     text-align: center;
   }
   .nx-footer-brand {
-    font-family: var(--nx-font-display);
+    font-family: var(--nx-font-signature);
     color: var(--nx-red);
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+    font-size: clamp(1.2rem, 10vw, 3.4rem);
+    line-height: 1;
+    margin-bottom: 14px;
+    text-shadow: 0 0 30px var(--nx-red-glow);
   }
   .nx-footer-links {
     display: flex;
@@ -1332,14 +1321,6 @@
 @media (max-width: 760px) {
   .nx-nav-links {
     display: none;
-  }
-  .nx-about-grid {
-    grid-template-columns: 1fr;
-  }
-  .nx-about-photo-wrap {
-    position: static;
-    max-width: 220px;
-    margin: 0 auto;
   }
   .nx-hero {
     min-height: 560px;
