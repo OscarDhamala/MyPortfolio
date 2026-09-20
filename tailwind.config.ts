@@ -25,10 +25,6 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				terminal: {
-					green: '#3FFF00',
-					dark: '#0D0D0D',
-				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -59,10 +55,8 @@ export default {
 				},
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
-				sora: ['"Bebas Neue"', 'Impact', 'sans-serif'],
-				mono: ['"JetBrains Mono"', 'monospace'],
+				sans: ['Archivo', '-apple-system', '"Helvetica Neue"', 'sans-serif'],
+				mono: ['"IBM Plex Mono"', '"SFMono-Regular"', 'Consolas', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -78,60 +72,10 @@ export default {
 					from: { height: 'var(--radix-accordion-content-height)' },
 					to: { height: '0' },
 				},
-				float: {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-10px)' },
-				},
-				'float-slow': {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-15px)' },
-				},
-				'float-fast': {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-5px)' },
-				},
-				typing: {
-					'0%': { width: '0' },
-					'100%': { width: '100%' },
-				},
-				blink: {
-					'0%, 100%': { opacity: '1' },
-					'50%': { opacity: '0' },
-				},
-				'fade-in': {
-					'0%': { opacity: '0' },
-					'100%': { opacity: '1' },
-				},
-				rotate: {
-					'0%': { transform: 'rotate(0deg)' },
-					'100%': { transform: 'rotate(360deg)' },
-				},
-				'spin-slow': {
-					'0%': { transform: 'rotate(0deg)' },
-					'100%': { transform: 'rotate(360deg)' },
-				},
-				'spin-medium': {
-					'0%': { transform: 'rotate(0deg)' },
-					'100%': { transform: 'rotate(360deg)' },
-				},
-				'pulse-slow': {
-					'0%, 100%': { opacity: '0.4' },
-					'50%': { opacity: '0.8' },
-				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'float': 'float 6s ease-in-out infinite',
-				'float-slow': 'float-slow 8s ease-in-out infinite',
-				'float-fast': 'float-fast 4s ease-in-out infinite',
-				'typing': 'typing 3.5s steps(40, end)',
-				'blink': 'blink 1s step-end infinite',
-				'fade-in': 'fade-in 0.5s ease-out',
-				'rotate': 'rotate 20s linear infinite',
-				'spin-slow': 'spin-slow 30s linear infinite',
-				'spin-medium': 'spin-medium 20s linear infinite',
-				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
 			}
 		}
 	},

@@ -25,33 +25,18 @@ export interface TechGroup {
   items: string[];
 }
 
-export type RowKey = "experience" | "projects" | "tech" | "about";
-
-export interface ProfileDef {
-  id: string;
-  name: string;
-  image?: string;
-  initials?: string;
-  className?: string;
-  order: RowKey[];
-}
+export const SECTION_IDS = ["home", "journey", "stack", "work", "contact"] as const;
+export type SectionId = (typeof SECTION_IDS)[number];
 
 export interface NavLink {
   label: string;
-  id: string;
+  id: SectionId;
 }
 
-export type ModalState =
-  | { type: "project"; data: Project }
-  | { type: "experience"; data: ExperienceStep }
-  | { type: "about" }
-  | null;
-
-export const BIO_PARAGRAPHS: string[] = [
-  "Hi! I'm Oscar, a full-stack engineer with experience in building web applications. I love turning problems into simple, beautiful, and intuitive solutions.",
-  "When I'm not learning to code, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while planning my next project.",
-  "My goal is to create digital experiences that not only look great but also provide real value to users and businesses.",
-];
+export const HERO = {
+  headline: ["Builder.", "Brewer.", "Explorer."],
+  body: "I'm a full-stack engineer who turns messy product and UX problems into software that ships, converts, and scales — with a habit of automating the boring parts.",
+};
 
 export const PROJECTS: Project[] = [
   {
@@ -164,20 +149,17 @@ export const EXPERIENCE: ExperienceStep[] = [
   },
 ];
 
-export const PROFILES: ProfileDef[] = [
-  { id: "oscar", name: "Oscar", image: "/uploads/Profile_Image.png", order: ["experience", "projects", "tech", "about"] },
-  { id: "recruiter", name: "Recruiter", initials: "R", className: "nx-avatar-recruiter", order: ["experience", "about", "projects", "tech"] },
-  { id: "developer", name: "Developer", initials: "D", className: "nx-avatar-developer", order: ["projects", "tech", "experience", "about"] },
-  { id: "guest", name: "Just Browsing", initials: "G", className: "nx-avatar-guest", order: ["experience", "projects", "tech", "about"] },
-];
-
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", id: "home" },
-  { label: "Experience", id: "experience" },
-  { label: "Tech Stack", id: "tech" },
-  { label: "Projects", id: "projects" },
+  { label: "Journey", id: "journey" },
+  { label: "Stack", id: "stack" },
+  { label: "Work", id: "work" },
   { label: "Contact", id: "contact" },
 ];
+
+export const PROFILE_IMAGE = "/uploads/Profile_Image.png";
+
+export const CV_PATH = "/uploads/OscarDhamala_CV.pdf";
 
 export const SOCIAL = {
   linkedin: "https://www.linkedin.com/in/oscar-dhamala-3b800a246/",
@@ -186,6 +168,67 @@ export const SOCIAL = {
   email: "https://mail.google.com/mail/?view=cm&fs=1&to=oscardhamala117@gmail.com",
 };
 
-export const CV_PATH = "/uploads/OscarDhamala_CV.pdf";
+export interface SearchItem {
+  id: string;
+  label: string;
+  sublabel: string;
+  sectionId: SectionId;
+  keywords: string;
+}
 
-export const PROFILE_STORAGE_KEY = "oscarflix_profile";
+const toKeywords = (...parts: string[]) => parts.join(" ").toLowerCase();
+
+export const SEARCH_INDEX: SearchItem[] = [
+  ...NAV_LINKS.map((link): SearchItem => ({
+    id: `nav-${link.id}`,
+    label: link.label,
+    sublabel: "Section",
+    sectionId: link.id,
+    keywords: toKeywords(link.label, "section", "page"),
+  })),
+  ...PROJECTS.map((project): SearchItem => ({
+    id: `project-${project.id}`,
+    label: project.name,
+    sublabel: project.tagline,
+    sectionId: "work",
+    keywords: toKeywords(project.name, project.tagline, project.description, ...project.tags),
+  })),
+  ...TECH_GROUPS.flatMap((group) =>
+    group.items.map((item): SearchItem => ({
+      id: `tech-${group.category}-${item}`,
+      label: item,
+      sublabel: `${group.category} · Stack`,
+      sectionId: "stack",
+      keywords: toKeywords(item, group.category, "stack", "tech", "toolkit"),
+    }))
+  ),
+  ...EXPERIENCE.map((step): SearchItem => ({
+    id: `experience-${step.phase}`,
+    label: step.title,
+    sublabel: `${step.org} · Journey`,
+    sectionId: "journey",
+    keywords: toKeywords(step.title, step.org, step.phase, step.description),
+  })),
+  {
+    id: "contact-email",
+    label: "Email",
+    sublabel: "Get in touch",
+    sectionId: "contact",
+    keywords: toKeywords("email", "contact", "mail", "get in touch"),
+  },
+  {
+    id: "contact-linkedin",
+    label: "LinkedIn",
+    sublabel: "Get in touch",
+    sectionId: "contact",
+    keywords: toKeywords("linkedin", "contact", "social"),
+  },
+  {
+    id: "contact-github",
+    label: "GitHub",
+    sublabel: "Get in touch",
+    sectionId: "contact",
+    keywords: toKeywords("github", "contact", "code", "social"),
+  },
+];
+
