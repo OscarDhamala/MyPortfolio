@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { NAV_LINKS, SectionId } from "@/data/portfolioData";
 import { IconClose, IconMenu } from "@/components/portfolio/icons";
+import ThemeSlider from "@/components/portfolio/ThemeSlider";
 
 interface NavProps {
   active: SectionId;
+  themeProgress: number;
+  onThemeProgressChange: (value: number) => void;
 }
 
 const NavLinkList = ({
@@ -40,7 +43,7 @@ const NavLinkList = ({
   </div>
 );
 
-const Nav = ({ active }: NavProps) => {
+const Nav = ({ active, themeProgress, onThemeProgressChange }: NavProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const closeMobile = () => setMobileOpen(false);
@@ -71,6 +74,7 @@ const Nav = ({ active }: NavProps) => {
             >
               Get in touch
             </a>
+            <ThemeSlider value={themeProgress} onChange={onThemeProgressChange} />
             <button
               type="button"
               onClick={() => setMobileOpen((v) => !v)}

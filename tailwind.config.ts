@@ -57,6 +57,7 @@ export default {
 			fontFamily: {
 				sans: ['Archivo', '-apple-system', '"Helvetica Neue"', 'sans-serif'],
 				mono: ['"IBM Plex Mono"', '"SFMono-Regular"', 'Consolas', 'monospace'],
+				signature: ['"Great Vibes"', 'cursive'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

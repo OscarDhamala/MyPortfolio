@@ -58,6 +58,9 @@ const Contact = () => {
           Email me
         </a>
       </div>
+      <p className="mt-8 whitespace-nowrap font-signature text-[clamp(4.5rem,18vw,8rem)] leading-none text-accent" aria-label="Oscar Dhamala">
+        Oscar Dhamala
+      </p>
     </section>
   );
 };

@@ -57,6 +57,9 @@ const GridBackground = () => {
       dotColor = readCssColor("--foreground");
     };
 
+    const themeObserver = new MutationObserver(onSchemeChange);
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["style"] });
+
     const onMove = (e: MouseEvent) => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
@@ -74,7 +77,7 @@ const GridBackground = () => {
       for (const p of points) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, 1.1, 0, Math.PI * 2);
-        ctx.fillStyle = `hsl(${dotColor} / 0.13)`;
+        ctx.fillStyle = `hsl(${dotColor} / 0.2)`;
         ctx.fill();
       }
     };
@@ -108,7 +111,7 @@ const GridBackground = () => {
 
         ctx.beginPath();
         ctx.arc(p.x + p.ox, p.y + p.oy, near ? 1.25 : 1.1, 0, Math.PI * 2);
-        ctx.fillStyle = `hsl(${dotColor} / ${near ? 0.14 : 0.13})`;
+        ctx.fillStyle = `hsl(${dotColor} / ${near ? 0.26 : 0.2})`;
         ctx.fill();
       }
 
@@ -132,6 +135,7 @@ const GridBackground = () => {
       window.removeEventListener("mousemove", onMove);
       window.removeEventListener("mouseleave", onLeave);
       schemeQuery.removeEventListener("change", onSchemeChange);
+      themeObserver.disconnect();
       cancelAnimationFrame(raf);
     };
   }, []);
