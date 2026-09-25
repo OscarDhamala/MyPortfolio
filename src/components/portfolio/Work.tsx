@@ -1,4 +1,5 @@
 import { PROJECTS } from "@/data/portfolioData";
+import { ExternalLink } from "lucide-react";
 
 const Work = () => {
   return (
@@ -15,9 +16,25 @@ const Work = () => {
 
       <div className="grid grid-cols-1 gap-7 min-[900px]:grid-cols-3">
         {PROJECTS.map((project) => (
-          <article key={project.id} className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-            <div className="aspect-[16/10] overflow-hidden border-b border-border">
-              <img src={project.image} alt={`${project.name} product screenshot`} className="h-full w-full object-cover" />
+          <article key={project.id} className="group flex flex-col overflow-hidden rounded-md border border-border bg-card shadow-sm">
+            <div className="relative aspect-[2/1] overflow-hidden rounded-[5px] border-b border-border bg-secondary/40">
+              <img
+                src={project.image}
+                alt={`${project.name} product screenshot`}
+                className="h-full w-full object-contain p-1.5 transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              <div className="glass pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus-within:opacity-100">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pointer-events-auto glass-frame inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold text-foreground opacity-0 translate-y-2 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100"
+                  aria-label={`Visit ${project.name}`}
+                >
+                  <ExternalLink aria-hidden="true" size={16} strokeWidth={2.25} />
+                  Visit project
+                </a>
+              </div>
             </div>
             <div className="flex flex-1 flex-col gap-3 p-6">
               <div>
@@ -32,14 +49,6 @@ const Work = () => {
                   </span>
                 ))}
               </div>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold transition-colors hover:text-accent"
-              >
-                View project &rarr;
-              </a>
             </div>
           </article>
         ))}

@@ -34,7 +34,7 @@ export const TECH_ICON_MAP: Record<string, TechIconDef> = {
   SQL: { icon: SiMysql, color: "#4479A1" },
   PostgreSQL: { icon: SiPostgresql, color: "#336791" },
   AWS: { icon: FaAws, color: "#FF9900" },
-  PowerBI: { icon: BarChart3, color: "#F2C811" },
+  "Power BI": { icon: BarChart3, color: "#F2C811" },
   TensorFlow: { icon: SiTensorflow, color: "#FF6F00" },
   "AI Agents": { icon: Brain, color: "#A78BFA" },
   "REST API": { icon: Braces, color: "#38BDF8" },

@@ -1,6 +1,17 @@
 import { TECH_GROUPS } from "@/data/portfolioData";
+import { TECH_ICON_MAP } from "@/data/techIcons";
+import DriftWall, { type DriftWallItem } from "@/components/portfolio/DriftWall";
 
 const Stack = () => {
+  const wallItems: DriftWallItem[] = TECH_GROUPS.flatMap((group) =>
+    group.items.flatMap((item) => {
+      const definition = TECH_ICON_MAP[item];
+      return definition
+        ? [{ label: item, category: group.category, color: definition.color, icon: definition.icon }]
+        : [];
+    })
+  );
+
   return (
     <section id="stack" className="mx-auto max-w-[1180px] scroll-mt-28 px-6 py-16 min-[900px]:py-24">
       <div className="mb-11 flex flex-col gap-3.5">
@@ -13,23 +24,20 @@ const Stack = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {TECH_GROUPS.map((group) => (
-          <div key={group.category} className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6">
-            <div className="flex items-center gap-2.5">
-              <span className="h-2.5 w-2.5 flex-shrink-0 rounded-full" style={{ background: group.color }} />
-              <span className="text-[15px] font-bold">{group.category}</span>
-            </div>
-            <div className="flex flex-col gap-2">
-              {group.items.map((item) => (
-                <div key={item} className="rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm text-muted-foreground">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+      <DriftWall
+        items={wallItems}
+        columns={5}
+        height={440}
+        tileWidth={168}
+        tileHeight={124}
+        gap={16}
+        radius={12}
+        speed={28}
+        direction="up"
+        parallax={0.55}
+        lift={24}
+        dim={0.82}
+      />
     </section>
   );
 };

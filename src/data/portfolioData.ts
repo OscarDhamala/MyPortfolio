@@ -71,10 +71,10 @@ export const PROJECTS: Project[] = [
 ];
 
 export const TECH_GROUPS: TechGroup[] = [
-  { category: "Frontend", color: "#5ec8ff", items: ["React", "Next.js", "Supabase", "PHP"] },
-  { category: "Backend", color: "#3fd67a", items: ["Node.js", "Python", "Docker", "n8n"] },
-  { category: "Data & Cloud", color: "#e8b000", items: ["MongoDB", "SQL", "PostgreSQL", "AWS"] },
-  { category: "AI", color: "#a78bfa", items: ["PowerBI", "TensorFlow", "AI Agents", "REST API"] },
+  { category: "Frontend", color: "#5ec8ff", items: ["React", "Next.js"] },
+  { category: "Backend", color: "#3fd67a", items: ["PHP", "Node.js", "Python", "REST API"] },
+  { category: "Data & Cloud", color: "#e8b000", items: ["Supabase", "Docker", "MongoDB", "SQL", "PostgreSQL", "AWS", "Power BI"] },
+  { category: "AI & Automation", color: "#a78bfa", items: ["n8n", "TensorFlow", "AI Agents"] },
 ];
 
 export const EXPERIENCE: ExperienceStep[] = [
